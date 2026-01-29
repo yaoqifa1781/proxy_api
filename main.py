@@ -6,7 +6,7 @@ from starlette.requests import ClientDisconnect
 from starlette.background import BackgroundTask
 
 # 从环境变量获取目标地址
-TARGET_URL = os.getenv("TARGET_URL", "https://api-1.cloudapp.ink")
+TARGET_URL = os.getenv("TARGET_URL", "http://httpbin.org")
 
 app = FastAPI()
 
