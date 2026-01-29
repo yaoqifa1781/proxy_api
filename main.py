@@ -17,6 +17,10 @@ client = httpx.AsyncClient(base_url=TARGET_URL, timeout=None)
 @app.on_event("shutdown")
 async def shutdown_event():
     await client.aclose()
+	
+@app.get("/health")
+async def health_check():
+    return JSONResponse(content={"status": "ok"})
 
 async def _proxy(request: Request, path: str):
     # 1. 构建目标 URL
