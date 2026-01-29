@@ -1,7 +1,7 @@
 import os
 import httpx
 from fastapi import FastAPI, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from starlette.requests import ClientDisconnect
 from starlette.background import BackgroundTask
 
